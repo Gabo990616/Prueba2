@@ -1,0 +1,36 @@
+<div class="container" style="width: 61%;">
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip01" class="form-label">Identificacion</label>
+      <input type="text" class="form-control" name="usuario.identificacion" [(ngModel)]="usuario.identificacion" required>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip02" class="form-label">Nombre</label>
+      <input type="text" class="form-control" name="usuario.nombre" [(ngModel)]="usuario.nombre" required>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltipUsername" class="form-label">Ususario </label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" >@</span>
+        <input type="text" class="form-control" name="usuario.user" [(ngModel)]="usuario.user" aria-describedby="validationTooltipUsernamePrepend" required>
+      </div>
+    </div>
+    <div class="col-md-6 position-relative">
+      <label for="validationTooltip03" class="form-label">Contraseña</label>
+      <input type="text" class="form-control" name="usuario.password" [(ngModel)]="usuario.password"required>
+    </div>
+    <div class="col-md-3 position-relative">
+      <label for="validationTooltip04" class="form-label">Rol</label>
+      <select class="form-select" name="usuario.rol" [(ngModel)]="usuario.rol" required>
+        <option selected disabled  value="">Seleccione</option>
+        <option>ADMINISTRADOR</option>
+        <option>ESTUDIANTE</option>
+      </select>
+    </div>
+  </form>
+  <div class="row">
+    <div class="col-6 btn-guardar">
+      <button class="btn btn-primary" (click)="guarda()" type="submit">Guardar</button>
+    </div>
+  </div>
+</div>
